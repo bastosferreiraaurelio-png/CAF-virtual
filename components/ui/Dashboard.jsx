@@ -1,6 +1,6 @@
 'use client';
 import { useAppStore } from '@/store/useAppStore';
-import FacadePicker from './facadePicker';
+import FacadePicker from './FacadePicker';
 
 export default function Dashboard() {
   const { buildings, companies, floors, rooms, publications, selectedBuildingId } = useAppStore();
