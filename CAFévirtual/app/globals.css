@@ -1,0 +1,29 @@
+:root { --bg:#0b0f14; --navy:#0a1428; --neon:#00ff88; --violet:#7a5cff; --text:#e6f1ef; }
+* { box-sizing: border-box; }
+body { margin:0; color:var(--text); background:radial-gradient(circle at 50% 0%, var(--navy), var(--bg) 70%); min-height:100vh; }
+.stage { position:fixed; inset:0; }
+.panel { background:rgba(12,20,32,.72); backdrop-filter:blur(10px); border:1px solid rgba(0,255,136,.25); border-radius:12px; }
+.bar { position:fixed; top:12px; left:12px; right:12px; z-index:10; display:flex; gap:16px; align-items:center; padding:8px 14px; flex-wrap:wrap; }
+.brand { color:var(--neon); cursor:pointer; text-shadow:0 0 12px var(--neon); }
+nav { display:flex; gap:8px; flex:1; flex-wrap:wrap; }
+.btn { background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.2); border-radius:8px; padding:8px 14px; cursor:pointer; font:inherit; }
+.btn:hover, .btn:focus-visible { border-color:var(--neon); outline:none; }
+.btn.primary { background:var(--neon); color:#04110b; border-color:var(--neon); font-weight:600; }
+.btn:disabled { opacity:.5; cursor:wait; }
+.side { position:fixed; right:12px; bottom:12px; z-index:10; padding:16px; display:flex; flex-direction:column; gap:8px; min-width:220px; }
+.toast { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); z-index:10; padding:10px 16px; }
+.warn { color:#ff9d6b; }
+.home { min-height:100vh; display:grid; place-content:center; justify-items:center; text-align:center; gap:12px; }
+.home h1 { font-size:clamp(2.4rem,8vw,5rem); margin:0; color:var(--neon); text-shadow:0 0 28px var(--neon); }
+.page { padding:90px 16px 32px; display:grid; justify-content:center; }
+.card { padding:24px; width:min(720px,100%); display:grid; gap:10px; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.grid div { border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:12px; display:grid; }
+.grid b { font-size:1.8rem; color:var(--neon); }
+.tag { font-size:.75rem; padding:2px 8px; border-radius:99px; background:rgba(122,92,255,.3); }
+.demo { font-size:.8rem; opacity:.7; }
+.preview { height:70px; border:2px solid; border-radius:10px; margin-bottom:8px; }
+.center { position:fixed; inset:0; display:grid; place-content:center; }
+a { color:var(--neon); }
+label { display:flex; gap:8px; align-items:center; }
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
